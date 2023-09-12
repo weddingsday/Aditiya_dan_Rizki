@@ -12,9 +12,6 @@
     <meta property="og:locale" content="id_ID" />
     <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
     <!-- Bulma Version 0.8.x-->
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
@@ -86,7 +83,7 @@
               </div>
               <div class="navbar-item">
                 <a class="navbar-item" href="#rsvp">
-                  RSVP
+                  Ucapan
                 </a>
               </div>
             </div>
@@ -169,7 +166,7 @@
                   </li>
 
                   <li>
-                    <a href="#rsvp">RSVP</a>
+                    <a href="#rsvp">Ucapan</a>
                   </li>
                 </ul>
               </div>
@@ -365,40 +362,32 @@
         <div class="container">
           <div class="columns is-multiline">          
             <div class="column is-12 prolog">
-              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Konfirmasi Kehadiran</h1>
+              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Ucapan & Do'a</h1>
             </div>
             <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-              <p class="h2 subtitle">
-                Merupakan suatu kehormatan dan kebahagiaan bagi kami
-                <br>
-                apabila Bapak/Ibu/Saudara/Saudari berkenan hadir
-                memberikan doa restu.
-                <br>
-                <br>
-                Jika bisa hadir kami tunggu konfirmasinya, 
-                <!--<br>
-                Informasi: Di meja penerima tamu akan kami sediakan hand sanitizer dan pemeriksaan suhu tubuh.
-                <br> -->
-                <br>
-                Jika tidak memungkinkan untuk hadir di pernikahan kami,tidak mengapa,
-                <br> 
-                semoga bisa berjumpa di lain kesempatan
-                <br>
-                <br>
-                Stay safe & jaga kesehatan ya :)
-                </p>
      
-              <a href="https://api.whatsapp.com/send?phone=628XXXXXXXXX&text=Halo%20Aditiya,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
-                <i class="fab fa-whatsapp"></i>
-                &nbsp;&nbsp;Kabari Aditiya
-              </a>
+                <div class="container">
+                  <div id="disqus_thread"></div>
+                  <script>
+                      /**
+                      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                      /*
+                      var disqus_config = function () {
+                      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                      };
+                      */
+                      (function() { // DON'T EDIT BELOW THIS LINE
+                      var d = document, s = d.createElement('script');
+                      s.src = 'https://weddingsday.disqus.com/embed.js';
+                      s.setAttribute('data-timestamp', +new Date());
+                      (d.head || d.body).appendChild(s);
+                      })();
+                  </script>
+                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>  
+                </div>
               
-
-          
-              <a href="https://api.whatsapp.com/send?phone=6283827406633&text=Halo%20Rizki,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
-                <i class="fab fa-whatsapp"></i>
-                &nbsp;&nbsp; Kabari Rizki
-              </a >
               <div class="space40px"></div>
 
               <div class="space40px"></div>
@@ -424,6 +413,9 @@
         </div>
       </section>
       <!-- End RSVP Content -->
+         <!-- audio -->
+
+        <!-- end audio -->
     </div>
     <!-- End Main Content -->
 
@@ -443,6 +435,24 @@
     </div>
     <!-- End Footer -->
 
+    <div class="modal" id="exampleModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-fullscreen m-0">
+        <div class="modal-content m-0 p-0">
+          <div class="d-flex justify-content-center align-items-center" style="height: 100vh !important">
+            <div class="text-center">
+              <h1 class="font-estetik mb-4" style="font-size: 2.2rem">The Wedding Of</h1>
+              <div class="cropper border border-3 border-light shadow mb-4 mx-auto">
+                <img src="assets/images/bg.jpeg" alt="bg" />
+              </div>
+              <h1 class="font-estetik my-4" style="font-size: 2.5rem">Aditiya & Rizki</h1>
+              <div id="namatamu"></div>
+              <button type="button" class="btn btn-light shadow rounded-4 mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="buka()"><i class="fa-solid fa-envelope-open me-2"></i>Buka Undangan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/menikah.js"></script>
@@ -454,30 +464,5 @@
         duration: 800,
       });
     </script>
-    <!-- audio -->
-    <audio src="audio/2.mp3" autoplay controls loop class="d-none"></audio>
-    <!-- <div class="container text-center">
-      <audio id="myAudio" class="w-50">
-          <source src="audio/2.ogg" type="audio/ogg">
-          <source src="audio/2.mp3" type="audio/mpeg">
-      </audio>
-      <br>
-      <button onclick="playVid()" type="button" class="btn btn bi bi-play-circle-fill"></button>
-      <button onclick="pauseVid()" type="button" class="btn btn bi bi-pause-circle-fill"></button>
-    </div> -->
-    <!-- end audio -->
-    <!-- audio java -->
-    <!-- <script>
-      var vid = document.getElementById("myAudio");
-      // Play
-      function playVid() {
-        vid.play();
-      }
-
-      function pauseVid() {
-        vid.pause();
-      }
-    </script> -->
-    <!-- end java play -->
   </body>
 </html>
